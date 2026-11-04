@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="dbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="100%" stop-color="#12131c"/>
+    </linearGradient>
+    <radialGradient id="heat" cx="58%" cy="48%" r="35%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#f59e0b" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#3b82f6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2e39"/>
+      <stop offset="50%" stop-color="#1e222b"/>
+      <stop offset="100%" stop-color="#14171e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="360" fill="url(#dbg)"/>
+  <rect x="0" y="0" width="640" height="360" fill="none" stroke="#262626" stroke-width="1"/>
+
+  <!-- Top App Bar -->
+  <rect x="16" y="14" width="608" height="30" rx="6" fill="#181926"/>
+  <circle cx="34" cy="29" r="5" fill="#ef4444"/>
+  <circle cx="50" cy="29" r="5" fill="#f59e0b"/>
+  <circle cx="66" cy="29" r="5" fill="#10b981"/>
+  <text x="90" y="33" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="11">Anomalib :: PatchCore Industrial Inspector (Streamlit)</text>
+  <rect x="495" y="21" width="115" height="16" rx="3" fill="#dc2626" opacity="0.2"/>
+  <text x="502" y="32" fill="#f87171" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold">⚠ DEFECT DETECTED</text>
+
+  <!-- Main Left: Visual Heatmap Inspector -->
+  <rect x="16" y="52" width="370" height="292" rx="4" fill="#0f111a" stroke="#1f2438" stroke-width="1"/>
+  
+  <!-- Simulated Industrial Part (e.g. machined surface / PCB) -->
+  <rect x="36" y="70" width="330" height="220" rx="6" fill="url(#metal)" stroke="#334155" stroke-width="1.5"/>
+  
+  <!-- PCB Circuit Trace Grid -->
+  <path d="M50 100 H160 V180 H280" stroke="#475569" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+  <path d="M80 230 H220 V140 H340" stroke="#475569" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+  <circle cx="160" cy="180" r="4" fill="#64748b"/>
+  <circle cx="220" cy="140" r="4" fill="#64748b"/>
+  
+  <!-- Anomaly Heatmap Overlay (PatchCore Memory Bank matching) -->
+  <rect x="36" y="70" width="330" height="220" rx="6" fill="url(#heat)"/>
+
+  <!-- Bounding Box on Anomaly -->
+  <rect x="190" y="130" width="85" height="75" rx="3" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="3 3"/>
+  <rect x="190" y="114" width="76" height="15" rx="2" fill="#ef4444"/>
+  <text x="195" y="125" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold">Crack (0.89)</text>
+
+  <!-- Heatmap Color Scale Legend -->
+  <rect x="36" y="304" width="330" height="8" rx="4" fill="url(#heat)"/>
+  <text x="36" y="328" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="9">0.0 (Normal)</text>
+  <text x="320" y="328" text-anchor="end" fill="#f87171" font-family="'JetBrains Mono', monospace" font-size="9">1.0 (Anomaly Threshold: 0.65)</text>
+
+  <!-- Right Panel: Inference Details -->
+  <rect x="398" y="52" width="226" height="292" rx="4" fill="#0f111a" stroke="#1f2438" stroke-width="1"/>
+  
+  <text x="416" y="80" fill="#f1f5f9" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold">Model Diagnostics</text>
+
+  <rect x="414" y="96" width="194" height="46" rx="4" fill="#1e2235"/>
+  <text x="424" y="115" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">Framework:</text>
+  <text x="424" y="132" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">PatchCore (ResNet50)</text>
+
+  <rect x="414" y="152" width="194" height="46" rx="4" fill="#1e2235"/>
+  <text x="424" y="171" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">Inference Latency:</text>
+  <text x="424" y="188" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">18.4 ms (54 FPS)</text>
+
+  <rect x="414" y="208" width="194" height="46" rx="4" fill="#1e2235"/>
+  <text x="424" y="227" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">Image-Level Anomaly Score:</text>
+  <text x="424" y="244" fill="#ef4444" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold">0.892 > 0.650</text>
+
+  <rect x="414" y="266" width="194" height="32" rx="4" fill="#3b82f6"/>
+  <text x="511" y="286" text-anchor="middle" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">📥 Download Inspection PDF</text>
+
+  <text x="416" y="326" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="9">Unsupervised · Zero defect training samples</text>
+</svg>

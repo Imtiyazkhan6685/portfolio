@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Imtiyaz Khan - Python Developer | AI &amp; Machine Learning</title>
+  <meta name="description" content="Portfolio of Imtiyaz Khan - Python Developer &amp; AI/ML Engineer specializing in Python, SQL, data analysis, and machine learning." />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Aceternity UI Canvas Reveal Effect (Slow Pulsing Square Blocks) -->
+  <canvas id="reveal-canvas" aria-hidden="true"></canvas>
+
+  <!-- Deep Atmosphere Vignette Overlay (Keeps text clean and dark like jayjr.vercel.app) -->
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
+
+  <!-- Interactive Canvas Cursor Follow Wave -->
+  <canvas id="canvas" aria-hidden="true"></canvas>
+
+  <!-- CREATIVE FLOATING NAVIGATION BAR (Visible from the start) -->
+  <nav id="sticky-menu-bar" class="floating-nav-bar" aria-label="Main Navigation">
+    <div class="nav-left-group">
+      <!-- Mini Brand Avatar / Logo (Scrolls to top) -->
+      <a href="#hero" class="nav-brand-btn" title="Back to top">
+        <img src="assets/logo.png" alt="Imtiyaz Khan" class="nav-brand-avatar" />
+        <span class="nav-brand-name">Imtiyaz</span>
+      </a>
+
+      <span class="nav-divider"></span>
+
+      <!-- Website Page Section Links -->
+      <div class="nav-sections">
+        <a href="#experience" class="nav-sec-link" data-section="experience">Experience</a>
+        <a href="#projects" class="nav-sec-link" data-section="projects">Projects</a>
+        <a href="#writing" class="nav-sec-link" data-section="writing">Writing</a>
+        <a href="#certifications" class="nav-sec-link" data-section="certifications">Certifications</a>
+      </div>
+    </div>
+
+    <div class="nav-right-group">
+      <!-- Social Media Icons (GitHub, LinkedIn, Email, Phone) -->
+      <div class="nav-social-icons">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="nav-icon-link" aria-label="GitHub" title="GitHub">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="nav-icon-link" aria-label="LinkedIn" title="LinkedIn">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+        </a>
+        <a href="mailto:imtiyazkhan6685@gmail.com" class="nav-icon-link" aria-label="Email" title="imtiyazkhan6685@gmail.com">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+        </a>
+        <a href="tel:+919049046685" class="nav-icon-link" aria-label="Phone" title="+91 90490 46685">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+        </a>
+      </div>
+
+      <span class="nav-divider"></span>
+
+      <!-- Creative Resume Pill Button -->
+      <button type="button" class="nav-resume-btn resume-trigger" aria-label="Open Resume" title="View Resume">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+        </svg>
+        <span>Resume</span>
+      </button>
+
+      <span class="nav-divider"></span>
+
+      <!-- Theme Toggle inside Nav Bar -->
+      <button type="button" id="theme-toggle" class="nav-theme-btn" aria-label="Toggle theme" title="Toggle theme">
+        <span id="theme-toggle-label">Light</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Toast Notification -->
+  <div id="toast-notice" class="toast-notice" aria-live="polite"></div>
+
+  <!-- Main Container (Exact 720px max-width layout) -->
+  <!-- Main Container -->
+  <main class="container">
+    <div class="space-y-20 md:space-y-28">
+      
+      <!-- HERO HEADER -->
+      <header class="hero-section" id="hero">
+        <!-- Ambient Aurora Mesh Glow -->
+        <div class="hero-aurora-glow" aria-hidden="true"></div>
+
+        <!-- Two-column Avatar + Bio -->
+        <div class="flex flex-col md:flex-row items-start gap-8 md:gap-10">
+          
+          <!-- Column 1: Avatar with 3D Flip & Halo Ring -->
+          <div class="avatar-container shrink-0">
+            <div class="avatar-halo-glow" aria-hidden="true"></div>
+            <button type="button" id="avatar-btn" class="avatar-btn" aria-pressed="false" aria-label="Toggle profile avatar" title="Click to flip avatar">
+              <span id="avatar-card" class="avatar-flip-card">
+                <!-- Real Portrait (Front) -->
+                <span class="avatar-face">
+                  <img src="assets/profile-alt.jpg" alt="Imtiyaz Khan (Portrait)" />
+                </span>
+                <!-- Animated Illustrated Avatar (Back) -->
+                <span class="avatar-face avatar-face-back">
+                  <img src="assets/profile.jpg" alt="Imtiyaz Khan (Avatar)" />
+                </span>
+              </span>
+            </button>
+
+            <!-- Handwritten Wiggle Arrow -->
+            <span aria-hidden="true" class="avatar-hint animate-hint-wiggle">
+              <span class="font-hand avatar-hint-text">psst - click me</span>
+              <svg width="64" height="46" viewBox="0 0 64 46" fill="none" style="margin-top: 4px; margin-left: -4px;">
+                <path d="M54 3 C 40 6, 24 14, 15 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M9 26 L 14.5 35.5 L 23 29" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+          </div>
+
+          <!-- Column 2: Bio & Details -->
+          <div class="space-y-4 flex-1">
+            <div class="space-y-2">
+              <h1 class="name-title">Imtiyaz Khan</h1>
+              <p class="sub-title">Python Developer | AI &amp; Machine Learning <span class="sub-title-dot">·</span> <span class="sub-title-location">Pune, Maharashtra</span></p>
+            </div>
+
+            <!-- Focus Pills -->
+            <div class="hero-role-tags">
+              <span class="hero-tag"><span class="tag-glyph">✦</span> Python &amp; SQL</span>
+              <span class="hero-tag"><span class="tag-glyph">✦</span> BERT NLP Pipelines</span>
+              <span class="hero-tag"><span class="tag-glyph">✦</span> Scikit-learn &amp; ML</span>
+              <span class="hero-tag"><span class="tag-glyph">✦</span> Flask &amp; Streamlit</span>
+              <span class="hero-tag"><span class="tag-glyph">✦</span> Application Support</span>
+            </div>
+
+            <p class="bio-paragraph">
+              Computer Science &amp; Engineering graduate specializing in AI/ML, with hands-on experience in Python, SQL, data analysis, and machine learning. Skilled in troubleshooting, debugging, problem-solving, data preparation, and application support. Familiar with issue resolution, system performance analysis, technical documentation, and cross-functional collaboration. Interested in Application Support, Python Development, and AI &amp; Data Solutions roles.
+            </p>
+          </div>
+        </div>
+
+        <!-- HOBBIES SECTION WITH INTERACTIVE POPOVER -->
+        <div class="space-y-3 hobbies-wrapper" id="hobbies-container">
+          <p class="section-label" style="margin-bottom: 0;">Hobbies &amp; Focus Dimensions</p>
+          <div class="hobbies-list">
+            <button type="button" class="hobby-pill" data-hobby="Physical">Physical</button>
+            <button type="button" class="hobby-pill" data-hobby="Intellectual">Intellectual</button>
+            <button type="button" class="hobby-pill" data-hobby="Social">Social</button>
+            <button type="button" class="hobby-pill" data-hobby="Creative">Creative</button>
+          </div>
+
+          <!-- Floating Hobby Details Popover -->
+          <div id="hobby-popover" class="hobby-popover">
+            <div id="hobby-popover-title" class="hobby-popover-title"></div>
+            <p id="hobby-popover-note" class="hobby-popover-note"></p>
+            <div id="hobby-popover-tags" class="hobby-popover-tags"></div>
+          </div>
+        </div>
+
+        <!-- LINKS & RESUME ROW -->
+        <div class="links-resume-row" id="hero-links-row">
+          <ul class="social-links">
+            <li><a href="mailto:imtiyazkhan6685@gmail.com" class="social-action-link">Email</a></li>
+            <li><a href="tel:+919049046685" class="social-action-link">+91 90490 46685</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-action-link">LinkedIn</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-action-link">GitHub</a></li>
+            <li><button type="button" id="email-copy-btn" class="email-copy-btn" title="Click to copy email address">Copy Email</button></li>
+          </ul>
+
+          <button type="button" class="resume-cta resume-trigger" aria-label="Open Resume">
+            <span>Resume</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="resume-cta-icon">
+              <path d="M7 17l9.2-9.2M17 17V8H8"/>
+            </svg>
+          </button>
+        </div>
+
+      </header>
+
+      <!-- 01 // EDUCATION & EXPERIENCE SECTION -->
+      <section id="experience" class="section-block">
+        <div class="section-eyebrow">
+          <span class="section-idx">01</span>
+          <span class="section-sep">//</span>
+          <span class="section-label-text">Pathway</span>
+        </div>
+        <h2 class="section-heading">Education &amp; Experience</h2>
+
+        <!-- Interactive Glowing Timeline -->
+        <div class="timeline-container">
+          <div class="timeline-track" aria-hidden="true"></div>
+
+          <!-- Milestone 1: University -->
+          <div class="timeline-card-item">
+            <div class="timeline-node-anchor">
+              <div class="timeline-node-glyph" title="Education">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="timeline-card-body">
+              <div class="exp-header">
+                <span class="exp-role-title">Theem College of Engineering, University of Mumbai</span>
+                <span class="exp-period-badge">2022 — 2026</span>
+              </div>
+              <p class="exp-sub">Bachelor of Engineering · Computer Science &amp; Engineering (AI &amp; ML)</p>
+              <p class="exp-desc">
+                Completed B.E. with specialization in Artificial Intelligence and Machine Learning. Rigorous coursework and practical implementations covering AI, machine learning algorithms, Data Structures &amp; Algorithms (DSA), relational databases (SQL), and analytical problem solving.
+              </p>
+              <div class="exp-tag-row">
+                <span class="exp-tag">AI &amp; ML Specialization</span>
+                <span class="exp-tag">Data Structures &amp; Algorithms</span>
+                <span class="exp-tag">Relational Databases (SQL)</span>
+                <span class="exp-tag">Analytical Problem Solving</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 2: Python Development & ML -->
+          <div class="timeline-card-item">
+            <div class="timeline-node-anchor">
+              <div class="timeline-node-glyph" title="Engineering Experience">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div class="timeline-card-body">
+              <div class="exp-header">
+                <span class="exp-role-title">Python Development &amp; Machine Learning Solutions</span>
+                <span class="exp-period-badge">Practical Builds</span>
+              </div>
+              <p class="exp-sub">Python Developer &amp; ML Engineer <span class="sub-dot">·</span> Pune, Maharashtra</p>
+              <p class="exp-desc">
+                Engineered end-to-end Python applications, exploratory data analysis workflows, NLP text-classification pipelines using BERT, and regression modeling with Random Forest. Implemented REST API services with Flask and interactive dashboards with Streamlit.
+              </p>
+              <div class="exp-tag-row">
+                <span class="exp-tag">Python Architecture</span>
+                <span class="exp-tag">BERT / NLP</span>
+                <span class="exp-tag">Random Forest</span>
+                <span class="exp-tag">Flask REST APIs</span>
+                <span class="exp-tag">Streamlit</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 3: Support & Troubleshooting -->
+          <div class="timeline-card-item">
+            <div class="timeline-node-anchor">
+              <div class="timeline-node-glyph" title="Application Support">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="timeline-card-body">
+              <div class="exp-header">
+                <span class="exp-role-title">Data Solutions &amp; Application Support</span>
+                <span class="exp-period-badge">Operations &amp; Debugging</span>
+              </div>
+              <p class="exp-sub">Application Support &amp; Technical Documentation <span class="sub-dot">·</span> Pune, Maharashtra</p>
+              <p class="exp-desc">
+                Skilled in troubleshooting, code debugging, system performance analysis, data preparation with Pandas and NumPy, issue resolution, and cross-functional technical documentation.
+              </p>
+              <div class="exp-tag-row">
+                <span class="exp-tag">Troubleshooting &amp; Debugging</span>
+                <span class="exp-tag">Pandas &amp; NumPy</span>
+                <span class="exp-tag">System Performance</span>
+                <span class="exp-tag">Technical Docs</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 02 // TECHNICAL PROJECTS SECTION -->
+      <section id="projects" class="section-block">
+        <div class="section-eyebrow">
+          <span class="section-idx">02</span>
+          <span class="section-sep">//</span>
+          <span class="section-label-text">Selected Builds</span>
+        </div>
+        <h2 class="section-heading">Featured Engineering Projects</h2>
+
+        <div class="space-y-12">
+          
+          <!-- Project 1: Sentiment Analysis Tool -->
+          <article class="project-bento-card">
+            <div class="project-bento-preview">
+              <div class="project-preview overflow-hidden rounded-sm bg-[var(--border)]">
+                <img src="assets/sentiment-analysis.svg" alt="Sentiment Analysis Tool Preview" class="h-full w-full object-cover" />
+                <div class="specular-sheen" aria-hidden="true"></div>
+              </div>
+            </div>
+
+            <div class="project-bento-body">
+              <div class="project-card-header">
+                <span class="project-category-chip">NLP &amp; Deep Learning</span>
+                <h3 class="project-title">Sentiment Analysis Tool (NLP / BERT)</h3>
+              </div>
+
+              <p class="project-desc">
+                Built an end-to-end NLP text-classification pipeline using Python and BERT to classify product reviews as positive, negative, or neutral. Implemented text preprocessing, tokenization, model fine-tuning, and debugging using Hugging Face Transformers. Deployed as a high-responsiveness interactive Streamlit application with Scikit-learn evaluation metrics.
+              </p>
+
+              <!-- Live Architecture & Metric Badges -->
+              <div class="project-metrics-grid">
+                <div class="project-metric-card">
+                  <span class="metric-num">92.4%</span>
+                  <span class="metric-lbl">Test Accuracy</span>
+                </div>
+                <div class="project-metric-card">
+                  <span class="metric-num">BERT</span>
+                  <span class="metric-lbl">Pretrained Base</span>
+                </div>
+                <div class="project-metric-card">
+                  <span class="metric-num">Streamlit</span>
+                  <span class="metric-lbl">Live Web UI</span>
+                </div>
+                <div class="project-metric-card">
+                  <span class="metric-num">NLP</span>
+                  <span class="metric-lbl">Transformers</span>
+                </div>
+              </div>
+
+              <div class="project-links-row">
+                <a href="#writing" class="project-action-btn primary">
+                  <span>Read Architecture Deep Dive</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <button type="button" class="project-action-btn secondary resume-trigger">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                  </svg>
+                  <span>Verify in Resume</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: House Price Prediction -->
+          <article class="project-bento-card">
+            <div class="project-bento-preview">
+              <div class="project-preview overflow-hidden rounded-sm bg-[var(--border)]">
+                <img src="assets/house-price-prediction.svg" alt="House Price Prediction ML Preview" class="h-full w-full object-cover" />
+                <div class="specular-sheen" aria-hidden="true"></div>
+              </div>
+            </div>
+
+            <div class="project-bento-body">
+              <div class="project-card-header">
+                <span class="project-category-chip">Machine Learning &amp; APIs</span>
+                <h3 class="project-title">House Price Prediction (Machine Learning)</h3>
+              </div>
+
+              <p class="project-desc">
+                Developed Python-based regression models using Linear Regression and Random Forest for housing price prediction. Performed comprehensive exploratory data analysis, feature engineering, and troubleshooting. Deployed the trained model as a REST API using Flask, enabling real-time predictions through HTTP requests.
+              </p>
+
+              <!-- Live Architecture & Metric Badges -->
+              <div class="project-metrics-grid">
+                <div class="project-metric-card">
+                  <span class="metric-num">0.88</span>
+                  <span class="metric-lbl">R² Regression Score</span>
+                </div>
+                <div class="project-metric-card">
+                  <span class="metric-num">&lt;15ms</span>
+                  <span class="metric-lbl">REST Latency</span>
+                </div>
+                <div class="project-metric-card">
+                  <span class="metric-num">Random Forest</span>
+                  <span class="metric-lbl">Ensemble Model</span>
+                </div>
+                <div class="project-metric-card">
+                  <span class="metric-num">Flask</span>
+                  <span class="metric-lbl">HTTP Endpoint</span>
+                </div>
+              </div>
+
+              <div class="project-links-row">
+                <a href="#writing" class="project-action-btn primary">
+                  <span>Read Architecture Deep Dive</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <button type="button" class="project-action-btn secondary resume-trigger">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                  </svg>
+                  <span>Verify in Resume</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 03 // BLOGS / TECHNICAL WRITING SECTION -->
+      <section id="writing" class="section-block">
+        <div class="section-eyebrow">
+          <span class="section-idx">03</span>
+          <span class="section-sep">//</span>
+          <span class="section-label-text">Field Notes</span>
+        </div>
+        <h2 class="section-heading">Technical Deep Dives &amp; Writing</h2>
+
+        <div class="space-y-6">
+          
+          <!-- Blog 1 -->
+          <article class="blog-bento-card blog-card" data-blog-id="1">
+            <div class="blog-card-inner">
+              <div class="blog-card-meta">
+                <span class="blog-topic-pill">NLP &amp; Transformers</span>
+                <span class="blog-read-time">⏱ 6 min read</span>
+              </div>
+              <h3 class="blog-title">Building an End-to-End Sentiment Analysis Pipeline with BERT &amp; Streamlit</h3>
+              <p class="blog-summary">
+                In this technical deep dive, I break down the full NLP pipeline: ingesting customer reviews, tokenization and attention masks using Hugging Face Transformers, fine-tuning pretrained BERT for ternary sentiment classification, and deploying an interactive Streamlit application with Scikit-learn evaluation metrics.
+              </p>
+              <div class="blog-footer-row">
+                <span class="blog-badge-link">
+                  <span>Read Full Guide &amp; Architecture</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="blog-arrow-icon">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Blog 2 -->
+          <article class="blog-bento-card blog-card" data-blog-id="2">
+            <div class="blog-card-inner">
+              <div class="blog-card-meta">
+                <span class="blog-topic-pill">ML &amp; Deployment</span>
+                <span class="blog-read-time">⏱ 5 min read</span>
+              </div>
+              <h3 class="blog-title">Housing Price Prediction: From Feature Engineering to Flask REST API</h3>
+              <p class="blog-summary">
+                A comprehensive walkthrough on developing production-ready regression models. Covering exploratory data analysis with Pandas &amp; NumPy, feature engineering for real estate metrics, benchmarking Linear Regression against Random Forest, and deploying the model as a sub-15ms Flask REST API.
+              </p>
+              <div class="blog-footer-row">
+                <span class="blog-badge-link">
+                  <span>Read Technical Deep Dive</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="blog-arrow-icon">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 04 // CERTIFICATIONS & ACHIEVEMENTS SECTION -->
+      <section id="certifications" class="section-block">
+        <div class="section-eyebrow">
+          <span class="section-idx">04</span>
+          <span class="section-sep">//</span>
+          <span class="section-label-text">Accreditations</span>
+        </div>
+        <h2 class="section-heading">Certifications &amp; Achievements</h2>
+
+        <div class="space-y-6">
+          
+          <div class="cert-card">
+            <div class="cert-icon-wrapper">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+            </div>
+            <div class="cert-body">
+              <div class="exp-header">
+                <span class="exp-role-title">Introduction to Artificial Intelligence</span>
+                <span class="exp-period-badge">July 2026</span>
+              </div>
+              <p class="exp-sub">Foundational AI &amp; Machine Learning Certification</p>
+              <p class="exp-desc">
+                Foundational knowledge of AI concepts, supervised &amp; unsupervised machine learning principles, neural network fundamentals, and practical applications in real-world software solutions.
+              </p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon-wrapper">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div class="cert-body">
+              <div class="exp-header">
+                <span class="exp-role-title">Academic &amp; Project Demonstrations</span>
+                <span class="exp-period-badge">University of Mumbai</span>
+              </div>
+              <p class="exp-sub">Theem College of Engineering <span class="sub-dot">·</span> AI &amp; ML Specialization</p>
+              <p class="exp-desc">
+                Demonstrated practical engineering applications including Transformer-based NLP sentiment analysis with Streamlit and real-time Flask ML prediction APIs, showcasing strong debugging and troubleshooting skills.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 05 // TECH ARSENAL BENTO SECTION -->
+      <footer class="tech-footer section-block" id="tech">
+        <div class="section-eyebrow">
+          <span class="section-idx">05</span>
+          <span class="section-sep">//</span>
+          <span class="section-label-text">Arsenal</span>
+        </div>
+        <h2 class="section-heading">Technical Stack &amp; Skill Matrix</h2>
+
+        <!-- Interactive Category Filters -->
+        <div class="tech-filter-bar">
+          <button type="button" class="tech-filter-pill active" data-filter="all">
+            <span>All Skills</span>
+            <span class="filter-count">18</span>
+          </button>
+          <button type="button" class="tech-filter-pill" data-filter="aiml">
+            <span>AI &amp; Machine Learning</span>
+            <span class="filter-count">5</span>
+          </button>
+          <button type="button" class="tech-filter-pill" data-filter="data">
+            <span>Python &amp; Data</span>
+            <span class="filter-count">5</span>
+          </button>
+          <button type="button" class="tech-filter-pill" data-filter="web">
+            <span>Web &amp; APIs</span>
+            <span class="filter-count">4</span>
+          </button>
+          <button type="button" class="tech-filter-pill" data-filter="tools">
+            <span>Tools &amp; Systems</span>
+            <span class="filter-count">4</span>
+          </button>
+        </div>
+
+        <!-- Categorized Skills Grid -->
+        <div class="tech-bento-grid" id="tech-matrix">
+          
+          <!-- AI / ML -->
+          <div class="tech-card-cell" data-category="aiml">
+            <span class="tech-indicator dot-purple"></span>
+            <span class="tech-name">BERT / NLP</span>
+            <span class="tech-type-tag">Deep Learning</span>
+          </div>
+          <div class="tech-card-cell" data-category="aiml">
+            <span class="tech-indicator dot-purple"></span>
+            <span class="tech-name">Transformers</span>
+            <span class="tech-type-tag">Hugging Face</span>
+          </div>
+          <div class="tech-card-cell" data-category="aiml">
+            <span class="tech-indicator dot-purple"></span>
+            <span class="tech-name">Scikit-learn</span>
+            <span class="tech-type-tag">ML Modeling</span>
+          </div>
+          <div class="tech-card-cell" data-category="aiml">
+            <span class="tech-indicator dot-purple"></span>
+            <span class="tech-name">Random Forest</span>
+            <span class="tech-type-tag">Ensemble ML</span>
+          </div>
+          <div class="tech-card-cell" data-category="aiml">
+            <span class="tech-indicator dot-purple"></span>
+            <span class="tech-name">Linear Regression</span>
+            <span class="tech-type-tag">Regression</span>
+          </div>
+
+          <!-- Python & Data -->
+          <div class="tech-card-cell" data-category="data">
+            <span class="tech-indicator dot-cyan"></span>
+            <span class="tech-name">Python</span>
+            <span class="tech-type-tag">Core Language</span>
+          </div>
+          <div class="tech-card-cell" data-category="data">
+            <span class="tech-indicator dot-cyan"></span>
+            <span class="tech-name">SQL</span>
+            <span class="tech-type-tag">Relational DB</span>
+          </div>
+          <div class="tech-card-cell" data-category="data">
+            <span class="tech-indicator dot-cyan"></span>
+            <span class="tech-name">Pandas</span>
+            <span class="tech-type-tag">Data Wrangling</span>
+          </div>
+          <div class="tech-card-cell" data-category="data">
+            <span class="tech-indicator dot-cyan"></span>
+            <span class="tech-name">NumPy</span>
+            <span class="tech-type-tag">Numerical Math</span>
+          </div>
+          <div class="tech-card-cell" data-category="data">
+            <span class="tech-indicator dot-cyan"></span>
+            <span class="tech-name">EDA &amp; Feature Eng.</span>
+            <span class="tech-type-tag">Data Pipeline</span>
+          </div>
+
+          <!-- Web & APIs -->
+          <div class="tech-card-cell" data-category="web">
+            <span class="tech-indicator dot-emerald"></span>
+            <span class="tech-name">Flask</span>
+            <span class="tech-type-tag">REST APIs</span>
+          </div>
+          <div class="tech-card-cell" data-category="web">
+            <span class="tech-indicator dot-emerald"></span>
+            <span class="tech-name">Django</span>
+            <span class="tech-type-tag">Backend Framework</span>
+          </div>
+          <div class="tech-card-cell" data-category="web">
+            <span class="tech-indicator dot-emerald"></span>
+            <span class="tech-name">Streamlit</span>
+            <span class="tech-type-tag">Interactive UI</span>
+          </div>
+          <div class="tech-card-cell" data-category="web">
+            <span class="tech-indicator dot-emerald"></span>
+            <span class="tech-name">DSA</span>
+            <span class="tech-type-tag">Problem Solving</span>
+          </div>
+
+          <!-- Tools & Systems -->
+          <div class="tech-card-cell" data-category="tools">
+            <span class="tech-indicator dot-amber"></span>
+            <span class="tech-name">Git &amp; GitHub</span>
+            <span class="tech-type-tag">Version Control</span>
+          </div>
+          <div class="tech-card-cell" data-category="tools">
+            <span class="tech-indicator dot-amber"></span>
+            <span class="tech-name">Power BI</span>
+            <span class="tech-type-tag">BI Dashboards</span>
+          </div>
+          <div class="tech-card-cell" data-category="tools">
+            <span class="tech-indicator dot-amber"></span>
+            <span class="tech-name">System Debugging</span>
+            <span class="tech-type-tag">Troubleshooting</span>
+          </div>
+          <div class="tech-card-cell" data-category="tools">
+            <span class="tech-indicator dot-amber"></span>
+            <span class="tech-name">Technical Docs</span>
+            <span class="tech-type-tag">Architecture</span>
+          </div>
+
+        </div>
+
+        <div class="tech-footer-note">
+          <p>Crafted with precision · Fast, responsive &amp; accessible · &copy; 2026 Imtiyaz Khan</p>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- BLOG READING MODAL -->
+  <div id="blog-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Technical Deep Dive Reader">
+    <div class="modal-content">
+      <button type="button" id="blog-modal-close" class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div id="blog-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- RESUME PREVIEW MODAL (ORIGINAL PDF VIEWER & 2-PAGE DOCUMENT VIEWER) -->
+  <div id="resume-modal" class="modal-overlay resume-modal-overlay" role="dialog" aria-modal="true" aria-label="Original Resume PDF Viewer">
+    <div class="modal-content resume-modal-content">
+      <!-- Modal Header -->
+      <div class="resume-modal-header">
+        <div class="resume-modal-title-group">
+          <div class="resume-doc-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color: #ef4444;">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5h-2v-1h2c.55 0 1-.45 1-1v-1c0-.55-.45-1-1-1h-3v6h1.5v-1.5h1.5c.55 0 1-.45 1-1v-1c0-.55-.45-.1-1-.5zm5.5 0h-2.5v-5H15c.55 0 1 .45 1 1v3c0 .55-.45 1-1 1zm-4 0v-3h1.5c.28 0 .5.22.5.5v2c0 .28-.22.5-.5.5H11zm7-4h-2.5v5H17v-2h1v-1.5h-1V9h1.5V7.5z"/>
+            </svg>
+            <span>Original PDF</span>
+          </div>
+          <h2 class="resume-modal-title">Imtiyaz_Khan_Resume.pdf</h2>
+        </div>
+
+        <div class="resume-modal-actions">
+          <!-- View Switcher -->
+          <div class="resume-view-switcher">
+            <button type="button" id="resume-view-pdf-btn" class="resume-switch-btn active" title="Embedded PDF Viewer">
+              PDF View
+            </button>
+            <button type="button" id="resume-view-pages-btn" class="resume-switch-btn" title="2-Page Document View">
+              Pages (2)
+            </button>
+          </div>
+
+          <!-- Open in New Tab -->
+          <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-header-action-btn" title="Open original PDF in new browser tab">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            <span class="btn-text-desktop">Open Tab ↗</span>
+          </a>
+
+          <!-- Download Original PDF -->
+          <a href="assets/resume.pdf" download="Imtiyaz_Khan_Resume.pdf" class="resume-header-action-btn" title="Download original PDF">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span class="btn-text-desktop">Download</span>
+          </a>
+
+          <!-- Modal Close Button -->
+          <button type="button" id="resume-modal-close" class="modal-close-btn" aria-label="Close modal">✕</button>
+        </div>
+      </div>
+
+      <!-- Frame Body -->
+      <div class="resume-frame-body" id="resume-frame-body">
+        <!-- View 1: Genuine Native PDF Embed -->
+        <div id="resume-pdf-container" class="resume-pdf-container">
+          <iframe
+            id="resume-pdf-iframe"
+            src="assets/resume.pdf#toolbar=1&navpanes=0&view=FitH"
+            class="resume-pdf-iframe"
+            title="Imtiyaz Khan Original Resume PDF"
+          ></iframe>
+        </div>
+
+        <!-- View 2: High-Resolution 2-Page Document View (Exact pages rendered from original PDF) -->
+        <div id="resume-pages-container" class="resume-pages-container" style="display: none;">
+          <div class="resume-page-box">
+            <div class="resume-page-tag">Page 1 of 2 · Summary, Skills, Projects, Education</div>
+            <img src="assets/resume-page-1.png" alt="Imtiyaz Khan Original Resume - Page 1" class="resume-doc-sheet" draggable="false" />
+          </div>
+          <div class="resume-page-box">
+            <div class="resume-page-tag">Page 2 of 2 · Certification</div>
+            <img src="assets/resume-page-2.png" alt="Imtiyaz Khan Original Resume - Page 2" class="resume-doc-sheet" draggable="false" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

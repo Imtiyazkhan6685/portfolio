@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="sbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="posBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="640" height="360" fill="url(#sbg)"/>
+  <rect x="0" y="0" width="640" height="360" fill="none" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Top Window Header -->
+  <rect x="16" y="14" width="608" height="32" rx="6" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+  <circle cx="34" cy="30" r="5" fill="#ef4444"/>
+  <circle cx="50" cy="30" r="5" fill="#f59e0b"/>
+  <circle cx="66" cy="30" r="5" fill="#10b981"/>
+  <text x="90" y="34" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">Streamlit :: BERT Sentiment Classifier (Transformers)</text>
+  <rect x="495" y="21" width="115" height="18" rx="3" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-opacity="0.4"/>
+  <text x="510" y="33" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold">● MODEL ONLINE</text>
+
+  <!-- Left Column: Input & Tokens -->
+  <rect x="16" y="56" width="350" height="288" rx="6" fill="#0b1120" stroke="#1e293b" stroke-width="1"/>
+  
+  <text x="32" y="80" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">INPUT REVIEW TEXT (STREAMLIT UI)</text>
+  <rect x="32" y="92" width="318" height="74" rx="4" fill="#111c33" stroke="#2563eb" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="44" y="114" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11.5">"The model latency and accuracy exceeded expectations!</text>
+  <text x="44" y="132" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11.5">Clean architecture, robust evaluation and zero errors."</text>
+  <text x="44" y="152" fill="#60a5fa" font-family="'JetBrains Mono', monospace" font-size="10">tokens: 28 | batch_size: 1 | device: cuda</text>
+
+  <!-- BERT Tokenization Layer Visual -->
+  <text x="32" y="195" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">HUGGING FACE TOKENIZATION PIPELINE</text>
+  
+  <g transform="translate(32, 206)">
+    <rect x="0" y="0" width="46" height="24" rx="3" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="8" y="16" fill="#93c5fd" font-family="'JetBrains Mono', monospace" font-size="9.5">[CLS]</text>
+
+    <rect x="52" y="0" width="54" height="24" rx="3" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="59" y="16" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="9.5">model</text>
+
+    <rect x="112" y="0" width="60" height="24" rx="3" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="119" y="16" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="9.5">latency</text>
+
+    <rect x="178" y="0" width="68" height="24" rx="3" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="185" y="16" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="9.5">exceeded</text>
+
+    <rect x="252" y="0" width="46" height="24" rx="3" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="260" y="16" fill="#93c5fd" font-family="'JetBrains Mono', monospace" font-size="9.5">[SEP]</text>
+  </g>
+
+  <!-- Embedding & Attention indicator -->
+  <rect x="32" y="244" width="318" height="84" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="44" y="266" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">BERT Bidirectional Self-Attention Layers</text>
+  <path d="M44 285 L330 285" stroke="#334155" stroke-width="1"/>
+  <circle cx="80" cy="285" r="4" fill="#3b82f6"/>
+  <circle cx="160" cy="285" r="4" fill="#60a5fa"/>
+  <circle cx="240" cy="285" r="4" fill="#10b981"/>
+  <circle cx="310" cy="285" r="4" fill="#34d399"/>
+  <path d="M80 285 Q 160 270 240 285" stroke="#3b82f6" stroke-width="1.5" fill="none"/>
+  <path d="M160 285 Q 235 270 310 285" stroke="#10b981" stroke-width="1.5" fill="none"/>
+  <text x="44" y="314" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="9.5">Hidden State Dim: 768 | Fine-Tuned Layers: 12</text>
+
+  <!-- Right Column: Inference Output -->
+  <rect x="376" y="56" width="248" height="288" rx="6" fill="#0b1120" stroke="#1e293b" stroke-width="1"/>
+
+  <text x="392" y="80" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">INFERENCE CLASSIFICATION</text>
+
+  <!-- Big Result Card -->
+  <rect x="392" y="92" width="216" height="74" rx="5" fill="#064e3b" fill-opacity="0.3" stroke="#059669" stroke-width="1"/>
+  <text x="408" y="120" fill="#34d399" font-family="system-ui, sans-serif" font-size="20" font-weight="700">POSITIVE</text>
+  <text x="408" y="142" fill="#a7f3d0" font-family="'JetBrains Mono', monospace" font-size="11">Confidence: 96.4%</text>
+
+  <!-- Probabilities Breakdown -->
+  <text x="392" y="195" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">PROBABILITY DISTRIBUTION</text>
+
+  <!-- Positive Bar -->
+  <text x="392" y="218" fill="#e2e8f0" font-family="'JetBrains Mono', monospace" font-size="10">Positive</text>
+  <text x="568" y="218" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="10">96.4%</text>
+  <rect x="392" y="225" width="216" height="8" rx="4" fill="#1e293b"/>
+  <rect x="392" y="225" width="208" height="8" rx="4" fill="url(#posBar)"/>
+
+  <!-- Neutral Bar -->
+  <text x="392" y="253" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">Neutral</text>
+  <text x="575" y="253" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">2.8%</text>
+  <rect x="392" y="260" width="216" height="8" rx="4" fill="#1e293b"/>
+  <rect x="392" y="260" width="16" height="8" rx="4" fill="#64748b"/>
+
+  <!-- Negative Bar -->
+  <text x="392" y="288" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">Negative</text>
+  <text x="575" y="288" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">0.8%</text>
+  <rect x="392" y="295" width="216" height="8" rx="4" fill="#1e293b"/>
+  <rect x="392" y="295" width="8" height="8" rx="4" fill="#ef4444"/>
+
+  <!-- Footer Tag -->
+  <text x="392" y="328" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="9">Inference: 18ms · Scikit-learn + PyTorch</text>
+</svg>

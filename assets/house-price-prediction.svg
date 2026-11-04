@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="hbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="goldBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="640" height="360" fill="url(#hbg)"/>
+  <rect x="0" y="0" width="640" height="360" fill="none" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Top Window Header -->
+  <rect x="16" y="14" width="608" height="32" rx="6" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+  <circle cx="34" cy="30" r="5" fill="#ef4444"/>
+  <circle cx="50" cy="30" r="5" fill="#f59e0b"/>
+  <circle cx="66" cy="30" r="5" fill="#10b981"/>
+  <text x="90" y="34" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">Flask REST API :: Housing Price Predictor (Scikit-learn)</text>
+  <rect x="475" y="21" width="135" height="18" rx="3" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-opacity="0.4"/>
+  <text x="485" y="33" fill="#60a5fa" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold">HTTP 200 · 12ms</text>
+
+  <!-- Left Column: Input Features & JSON Payload -->
+  <rect x="16" y="56" width="340" height="288" rx="6" fill="#0b1120" stroke="#1e293b" stroke-width="1"/>
+  
+  <text x="32" y="80" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">INPUT FEATURES &amp; REST PAYLOAD</text>
+  
+  <!-- Code snippet box -->
+  <rect x="32" y="92" width="308" height="135" rx="4" fill="#030712" stroke="#1e293b" stroke-width="1"/>
+  <text x="44" y="112" fill="#a855f7" font-family="'JetBrains Mono', monospace" font-size="10.5">POST /api/v1/predict HTTP/1.1</text>
+  <text x="44" y="128" fill="#e2e8f0" font-family="'JetBrains Mono', monospace" font-size="10">{</text>
+  <text x="56" y="144" fill="#93c5fd" font-family="'JetBrains Mono', monospace" font-size="10">"total_sqft"<span fill="#e2e8f0">:</span> <span fill="#f59e0b">2450.0</span>,</text>
+  <text x="56" y="160" fill="#93c5fd" font-family="'JetBrains Mono', monospace" font-size="10">"bhk"<span fill="#e2e8f0">:</span> <span fill="#f59e0b">3</span>, <span fill="#93c5fd">"bathrooms"</span>: <span fill="#f59e0b">3</span>,</text>
+  <text x="56" y="176" fill="#93c5fd" font-family="'JetBrains Mono', monospace" font-size="10">"location"<span fill="#e2e8f0">:</span> <span fill="#34d399">"Pune_City"</span>,</text>
+  <text x="56" y="192" fill="#93c5fd" font-family="'JetBrains Mono', monospace" font-size="10">"property_age_yrs"<span fill="#e2e8f0">:</span> <span fill="#f59e0b">4</span></text>
+  <text x="44" y="208" fill="#e2e8f0" font-family="'JetBrains Mono', monospace" font-size="10">}</text>
+
+  <!-- Model comparison badge -->
+  <rect x="32" y="238" width="308" height="92" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="44" y="258" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">MODEL BENCHMARKS (EVALUATION)</text>
+  <text x="44" y="280" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="10.5">Linear Regression: R² = 0.84 | RMSE = 8.2%</text>
+  <text x="44" y="300" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600">Random Forest:    R² = 0.93 | RMSE = 4.1%</text>
+  <text x="44" y="318" fill="#60a5fa" font-family="'JetBrains Mono', monospace" font-size="9.5">Trained with Scikit-learn, Pandas &amp; NumPy</text>
+
+  <!-- Right Column: Prediction Output & Feature Importance -->
+  <rect x="368" y="56" width="256" height="288" rx="6" fill="#0b1120" stroke="#1e293b" stroke-width="1"/>
+
+  <text x="384" y="80" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">ESTIMATED VALUATION</text>
+
+  <!-- Output Valuation Card -->
+  <rect x="384" y="92" width="224" height="74" rx="5" fill="#1e3a8a" fill-opacity="0.25" stroke="#3b82f6" stroke-width="1"/>
+  <text x="400" y="122" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="22" font-weight="700">₹ 1,45,00,000</text>
+  <text x="400" y="144" fill="#93c5fd" font-family="'JetBrains Mono', monospace" font-size="10.5">EST: $175,000 · 95% Conf.</text>
+
+  <!-- Feature Importance breakdown -->
+  <text x="384" y="195" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">FEATURE IMPORTANCE (RF)</text>
+
+  <text x="384" y="218" fill="#e2e8f0" font-family="'JetBrains Mono', monospace" font-size="10">Square Footage</text>
+  <text x="575" y="218" fill="#60a5fa" font-family="'JetBrains Mono', monospace" font-size="10">42%</text>
+  <rect x="384" y="225" width="224" height="7" rx="3.5" fill="#1e293b"/>
+  <rect x="384" y="225" width="94" height="7" rx="3.5" fill="url(#goldBar)"/>
+
+  <text x="384" y="250" fill="#e2e8f0" font-family="'JetBrains Mono', monospace" font-size="10">Location Factor</text>
+  <text x="575" y="250" fill="#60a5fa" font-family="'JetBrains Mono', monospace" font-size="10">28%</text>
+  <rect x="384" y="257" width="224" height="7" rx="3.5" fill="#1e293b"/>
+  <rect x="384" y="257" width="63" height="7" rx="3.5" fill="url(#goldBar)"/>
+
+  <text x="384" y="282" fill="#e2e8f0" font-family="'JetBrains Mono', monospace" font-size="10">BHK / Layout</text>
+  <text x="575" y="282" fill="#60a5fa" font-family="'JetBrains Mono', monospace" font-size="10">18%</text>
+  <rect x="384" y="289" width="224" height="7" rx="3.5" fill="#1e293b"/>
+  <rect x="384" y="289" width="40" height="7" rx="3.5" fill="url(#goldBar)"/>
+
+  <text x="384" y="314" fill="#e2e8f0" font-family="'JetBrains Mono', monospace" font-size="10">Age of Property</text>
+  <text x="575" y="314" fill="#60a5fa" font-family="'JetBrains Mono', monospace" font-size="10">12%</text>
+  <rect x="384" y="321" width="224" height="7" rx="3.5" fill="#1e293b"/>
+  <rect x="384" y="321" width="27" height="7" rx="3.5" fill="url(#goldBar)"/>
+</svg>
