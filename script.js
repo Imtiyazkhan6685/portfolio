@@ -952,11 +952,18 @@ function showToast(msg) {
 // 8. CLIPBOARD COPY FOR EMAIL / CONTACT
 // ==========================================
 function initCopyButtons() {
-  const copyBtns = document.querySelectorAll(".email-copy-btn, #email-copy-btn, .discord-copy-btn, #discord-copy-btn");
+  const copyBtns = document.querySelectorAll("[data-copy], .email-copy-btn, #email-copy-btn, .discord-copy-btn, #discord-copy-btn");
   copyBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      navigator.clipboard.writeText("imtiyazkhan6685@gmail.com");
-      showToast("Email copied: imtiyazkhan6685@gmail.com");
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const val = btn.getAttribute("data-copy") || "imtiyazkhan6685@gmail.com";
+      navigator.clipboard.writeText(val).then(() => {
+        const isPhone = val.includes("+91") || val.startsWith("+");
+        showToast(isPhone ? `Phone copied: ${val}` : `Email copied: ${val}`);
+      }).catch(() => {
+        showToast(`Copied: ${val}`);
+      });
     });
   });
 }
@@ -1079,7 +1086,7 @@ function initCard3DTilt() {
 // 11. MAGNETIC ATTRACTION ON TECH BADGES & PILLS
 // ==========================================
 function initMagneticElements() {
-  const magnetics = document.querySelectorAll(".tech-card-cell, .hero-tag, .tech-filter-pill, .project-action-btn, .exp-period-badge, .nav-brand-btn, .resume-trigger, .hobby-pill");
+  const magnetics = document.querySelectorAll(".tech-card-cell, .hero-tag, .tech-filter-pill, .project-action-btn, .exp-period-badge, .nav-brand-btn, .resume-trigger, .hobby-pill, .contact-copy-pill, .footer-contact-btn");
 
   magnetics.forEach(el => {
     el.addEventListener("mousemove", (e) => {
