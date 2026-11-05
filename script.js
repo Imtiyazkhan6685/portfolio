@@ -790,33 +790,12 @@ function initBlogModal() {
 }
 
 // ==========================================
-// 6. RESUME VIEWER MODAL & CURSOR-FOLLOW ZOOM
+// 6. RESUME VIEWER MODAL & DIRECT DOCUMENT VIEW
 // ==========================================
 function initResumeModal() {
   const modal = document.getElementById("resume-modal");
   const closeBtn = document.getElementById("resume-modal-close");
   const triggerBtns = document.querySelectorAll(".resume-trigger");
-
-  const viewPdfBtn = document.getElementById("resume-view-pdf-btn");
-  const viewPagesBtn = document.getElementById("resume-view-pages-btn");
-  const pdfContainer = document.getElementById("resume-pdf-container");
-  const pagesContainer = document.getElementById("resume-pages-container");
-
-  if (viewPdfBtn && viewPagesBtn && pdfContainer && pagesContainer) {
-    viewPdfBtn.addEventListener("click", () => {
-      viewPdfBtn.classList.add("active");
-      viewPagesBtn.classList.remove("active");
-      pdfContainer.style.display = "block";
-      pagesContainer.style.display = "none";
-    });
-
-    viewPagesBtn.addEventListener("click", () => {
-      viewPagesBtn.classList.add("active");
-      viewPdfBtn.classList.remove("active");
-      pdfContainer.style.display = "none";
-      pagesContainer.style.display = "flex";
-    });
-  }
 
   function openResume() {
     if (!modal) return;
@@ -1107,14 +1086,17 @@ function initCard3DTilt() {
 // 11. MAGNETIC ATTRACTION ON TECH BADGES & PILLS
 // ==========================================
 function initMagneticElements() {
-  const magnetics = document.querySelectorAll(".tech-card-cell, .hero-tag, .tech-filter-pill, .project-action-btn, .exp-period-badge, .nav-brand-btn, .resume-trigger, .hobby-pill, .contact-copy-pill, .footer-contact-btn");
+  // Only enable on desktop mouse pointers to protect mobile touch gestures & clicks
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+  const magnetics = document.querySelectorAll(".tech-card-cell, .hero-tag, .tech-filter-pill, .project-action-btn, .exp-period-badge, .nav-brand-btn, .resume-trigger, .hobby-pill, .contact-copy-pill");
 
   magnetics.forEach(el => {
     el.addEventListener("mousemove", (e) => {
       const rect = el.getBoundingClientRect();
       const x = e.clientX - (rect.left + rect.width / 2);
       const y = e.clientY - (rect.top + rect.height / 2);
-      el.style.transform = `translate3d(${(x * 0.18).toFixed(1)}px, ${(y * 0.18).toFixed(1)}px, 0)`;
+      el.style.transform = `translate3d(${(x * 0.15).toFixed(1)}px, ${(y * 0.15).toFixed(1)}px, 0)`;
     });
 
     el.addEventListener("mouseleave", () => {
@@ -1169,6 +1151,36 @@ function initSpotlightCards() {
   });
 }
 
+// ==========================================
+// 14. RELIABLE EXTERNAL LINK HANDLER (GUARANTEES GITHUB & LINKEDIN OPEN IN ALL BROWSERS)
+// ==========================================
+function initExternalLinks() {
+  const links = document.querySelectorAll("a[target='_blank'], .external-link");
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      const url = link.getAttribute("href");
+      if (!url || !url.startsWith("http")) return;
+
+      // In framed preview environments (like IDE webviews or sandbox frames)
+      // standard target="_blank" is sometimes suppressed by sandbox policies.
+      // Explicitly invoke window.open to guarantee new tab launch on user click.
+      try {
+        if (window.self !== window.top) {
+          e.preventDefault();
+          window.open(url, "_blank", "noopener");
+        }
+      } catch (err) {
+        try {
+          e.preventDefault();
+          window.open(url, "_blank", "noopener");
+        } catch (innerErr) {
+          // Native browser behavior fallback
+        }
+      }
+    });
+  });
+}
+
 // Initialize everything on DOM ready
 document.addEventListener("DOMContentLoaded", () => {
   initCanvasRevealEffect();
@@ -1186,4 +1198,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initMagneticElements();
   initTechFilters();
   initSpotlightCards();
+  initExternalLinks();
 });
