@@ -518,25 +518,46 @@ function spawnAvatarSparkles(parent) {
 // 4. HOBBIES INTERACTIVE POPOVER
 // ==========================================
 const hobbiesData = {
+  Cricket: {
+    title: "Cricket & Physical Fitness",
+    items: ["Weekend Cricket", "Running", "Staying Active"],
+    note: "Playing weekend cricket and working out keeps me refreshed, energized, and sharp for long coding, data analysis, and debugging sessions."
+  },
+  Tech: {
+    title: "AI Tinkering & Tech Reading",
+    items: ["Hugging Face Transformers", "Python 3.12+ Features", "Model Architecture Notes"],
+    note: "I love exploring open-source ML models, reading engineering blogs, and tinkering with new Python tools, algorithms, and NLP pipelines."
+  },
+  Community: {
+    title: "Developer Communities & Peer Sharing",
+    items: ["Python Community", "Peer Code Reviews", "Debugging Walkthroughs"],
+    note: "Engaging with other developers, discussing tricky software bugs, and sharing practical solutions and lessons learned along the way."
+  },
+  Visuals: {
+    title: "Interactive UIs & Data Dashboards",
+    items: ["Streamlit Web Apps", "Power BI Dashboards", "Flask REST APIs"],
+    note: "Designing intuitive interfaces for machine learning tools so non-technical users can interact with complex models effortlessly."
+  },
+  // Legacy aliases
   Physical: {
-    title: "Physical Fitness & Sports",
-    items: ["Running", "Cricket", "Core Training"],
-    note: "Staying active and energized helps maintain strong mental focus during long development, data exploration, and ML training sessions."
+    title: "Cricket & Physical Fitness",
+    items: ["Weekend Cricket", "Running", "Staying Active"],
+    note: "Playing weekend cricket and working out keeps me refreshed and sharp."
   },
   Intellectual: {
-    title: "AI/ML, NLP & Problem Solving",
-    items: ["BERT & Transformers", "Data Structures & Algorithms", "Feature Engineering"],
-    note: "Diving into state-of-the-art NLP fine-tuning, regression optimization, model debugging, and solving complex algorithmic challenges."
+    title: "AI Tinkering & Tech Reading",
+    items: ["Hugging Face Transformers", "Python Tools", "Model Architectures"],
+    note: "Exploring open-source ML models and tinkering with new Python tools."
   },
   Social: {
-    title: "Community & Peer Engineering",
-    items: ["Python Developer Forums", "AI/ML Meetups", "Technical Collaboration"],
-    note: "Collaborating with fellow engineers, participating in developer discussions, peer debugging, and sharing technical insights."
+    title: "Developer Communities & Peer Sharing",
+    items: ["Python Community", "Peer Reviews", "Tech Discussions"],
+    note: "Engaging with other developers and discussing practical software solutions."
   },
   Creative: {
-    title: "Interactive UI & Visual Analytics",
-    items: ["Streamlit Dashboards", "Power BI Visuals", "REST API Prototyping"],
-    note: "Designing intuitive interfaces for machine learning tools, crafting clear data visualizations, and building developer-friendly APIs."
+    title: "Interactive UIs & Data Dashboards",
+    items: ["Streamlit Web Apps", "Power BI Dashboards", "Flask APIs"],
+    note: "Designing intuitive interfaces for machine learning tools."
   }
 };
 
