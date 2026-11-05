@@ -1044,9 +1044,12 @@ function initNavigation() {
 }
 
 // ==========================================
-// 10. TACTILE 3D CARD PERSPECTIVE TILT & SPECULAR GLOW
+// 10. TACTILE 3D CARD PERSPECTIVE TILT & SPECULAR GLOW (DESKTOP MOUSE ONLY)
 // ==========================================
 function initCard3DTilt() {
+  // Guard: Only enable on desktop mouse pointers to prevent sticky tilt distortion on touch screens
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
   const cards = document.querySelectorAll(".project-preview, .blog-bento-card");
 
   cards.forEach(card => {
@@ -1135,9 +1138,12 @@ function initTechFilters() {
 }
 
 // ==========================================
-// 13. DYNAMIC CARD SPOTLIGHT BORDER HIGHLIGHT
+// 13. DYNAMIC CARD SPOTLIGHT BORDER HIGHLIGHT (DESKTOP MOUSE ONLY)
 // ==========================================
 function initSpotlightCards() {
+  // Guard: Only enable on desktop mouse pointers to prevent stuck glow artifacts on touch screens
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
   const spotlightCards = document.querySelectorAll(".project-bento-card, .blog-bento-card, .timeline-card-body");
 
   spotlightCards.forEach(card => {
